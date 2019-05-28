@@ -1,0 +1,305 @@
+@charset "UTF-8";
+
+/**
+ * 
+ * @authors flack (opencoding@hotmail.com)
+ * @date    2019-05-19 12:51:17
+ * @version $v1.0.0$
+ */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.solarsys {
+    position: relative;
+    /* display: flex;
+        justify-content: center;
+        align-items: center; */
+    margin: 0px auto;
+    width: 800px;
+    height: 800px;
+    background-color: #000;
+    transform: scale(1);
+}
+
+/*太阳*/
+.sun {
+    position: relative;
+    left: 375px;
+    top: 375px;
+    margin: 0;
+    height: 50px;
+    width: 50px;
+    background-color: rgb(248, 107, 35);
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px rgb(248, 107, 35), -5px -5px 10px rgb(248, 107, 35), 5px -5px 10px rgb(248, 107, 35), -5px 5px 10px rgb(248, 107, 35);
+}
+
+/*水星轨道*/
+.mercuryOrbit {
+    position: absolute;
+    left: 342px;
+    top: 342px;
+    height: 115px;
+    width: 115px;
+    background-color: transparent;
+    border-radius: 50%;
+    border-style: dashed;
+    border-color: gray;
+    border-width: 1px;
+}
+
+/*水星*/
+.mercury {
+    position: absolute;
+    left: 337.5px;
+    top: 395px;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(166, 138, 56);
+    border-radius: 50%;
+    transform-origin: 62.5px 5px;
+    animation: rotate 1.5s infinite linear;
+}
+
+/* 金星轨道 */
+.venusOrbit {
+    position: absolute;
+    left: 320px;
+    top: 320px;
+    width: 160px;
+    height: 160px;
+    background-color: transparent;
+    border-style: dashed;
+    border-color: gray;
+    border-width: 1px;
+    border-radius: 50%;
+}
+
+/* 金星 */
+.venus {
+    position: absolute;
+    left: 309px;
+    top: 389px;
+    width: 22px;
+    height: 22px;
+    background-color: rgb(246, 157, 97);
+    border-radius: 50%;
+    transform-origin: 91px 11px;
+    animation: rotate 3.84s infinite linear;
+}
+
+/* 地球轨道 */
+.earthOrbit {
+    position: absolute;
+    left: 275px;
+    top: 275px;
+    width: 250px;
+    height: 250px;
+    background-color: transparent;
+    border-style: dashed;
+    border-color: gray;
+    border-width: 1px;
+    border-radius: 50%;
+}
+
+/* 地球 */
+.earth {
+    position: absolute;
+    left: 266.5px;
+    top: 391px;
+    width: 18px;
+    height: 18px;
+    background-color: rgb(115, 114, 174);
+    border-radius: 50%;
+    transform-origin: 134px 9px;
+    animation: rotate 6.25s infinite linear;
+}
+
+/* 火星轨道 */
+.marsOrbit {
+    position: absolute;
+    left: 230px;
+    top: 230px;
+    width: 340px;
+    height: 340px;
+    background-color: transparent;
+    border-style: dashed;
+    border-color: gray;
+    border-width: 1px;
+    border-radius: 50%;
+}
+
+/* 火星 */
+.mars {
+    position: absolute;
+    left: 222.5px;
+    top: 392px;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(140, 119, 63);
+    border-radius: 50%;
+    transform-origin: 177.5px 7.5px;
+    animation: rotate 11.75s infinite linear;
+}
+
+/* 木星轨道 */
+.jupiterOrbit {
+    position: absolute;
+    left: 155px;
+    top: 155px;
+    width: 490px;
+    height: 490px;
+    background-color: transparent;
+    border-style: dashed;
+    border-color: gray;
+    border-width: 1px;
+    border-radius: 50%;
+}
+
+/* 木星 */
+.jupiter {
+    position: absolute;
+    left: 134px;
+    top: 379px;
+    width: 42px;
+    height: 42px;
+    background-color: rgb(156, 164, 143);
+    border-radius: 50%;
+    transform-origin: 266px 21px;
+    animation: rotate 74.04s infinite linear;
+}
+
+/* 土星轨道 */
+.saturnOrbit {
+    position: absolute;
+    left: 105px;
+    top: 105px;
+    width: 590px;
+    height: 590px;
+    background-color: transparent;
+    border-style: dashed;
+    border-color: gray;
+    border-width: 1px;
+    border-radius: 50%;
+}
+
+/* 土星 */
+.saturn {
+    position: absolute;
+    left: 92px;
+    top: 387px;
+    width: 26px;
+    height: 26px;
+    background-color: rgb(215, 171, 68);
+    border-radius: 50%;
+    transform-origin: 308px 13px;
+    animation: rotate 183.92s infinite linear;
+}
+
+/* 天王星轨道 */
+.uranusOrbit {
+    position: absolute;
+    left: 55px;
+    top: 55px;
+    width: 690px;
+    height: 690px;
+    background-color: transparent;
+    border-style: dashed;
+    border-color: gray;
+    border-width: 1px;
+    border-radius: 50%;
+}
+
+/* 天王星 */
+.uranus {
+    position: absolute;
+    left: 41.5px;
+    top: 386.5px;
+    width: 27px;
+    height: 27px;
+    background-color: rgb(164, 192, 206);
+    border-radius: 50%;
+    transform-origin: 358.5px 13.5px;
+    animation: rotate 524.46s infinite linear;
+}
+
+/* 海王星轨道 */
+.neptuneOrbit {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 760px;
+    height: 760px;
+    background-color: transparent;
+    border-style: dashed;
+    border-color: gray;
+    border-width: 1px;
+    border-radius: 50%;
+}
+
+/* 海王星 */
+.neptune {
+    position: absolute;
+    left: 10px;
+    top: 390px;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(133, 136, 180);
+    border-radius: 50%;
+    transform-origin: 390px 10px;
+    animation: rotate 1028.76s infinite linear;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(-360deg);
+    }
+
+    /* 0% {
+        transform: rotate(0deg);
+    }
+    
+    10% {
+        transform: rotate(-36deg);
+    }
+    
+    20% {
+        transform: rotate(-72deg);
+    }
+    
+    30% {
+        transform: rotate(-108deg);
+    }
+    
+    40% {
+        transform: rotate(-144deg);
+    }
+    
+    50% {
+        transform: rotate(-180deg);
+    }
+    
+    60% {
+        transform: rotate(-216deg);
+    }
+    
+    70% {
+        transform: rotate(-252deg);
+    }
+    
+    80% {
+        transform: rotate(-288deg);
+    }
+    
+    90% {
+        transform: rotate(-324deg);
+    }
+    
+    100% {
+        transform: rotate(-360deg);
+    } */
+}

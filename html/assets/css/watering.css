@@ -1,0 +1,332 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2019-05-19 13:37:37
+ * @version $Id$
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.box {
+    width: 500px;
+    border: 1px solid #ddd;
+    margin: 0px auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.tree {
+    width: 208px;
+    height: 300px;
+    background: url(../img/tree_01.png) no-repeat;
+    margin: 250px auto 0;
+}
+
+.bottle {
+    position: absolute;
+    top: 180px;
+    right: 100px;
+    width: 80px;
+    height: 60px;
+    background: url(../img/bottle_02.png) no-repeat;
+    background-size: 80px 60px;
+    background-origin: content-box;
+    /* background-color: #000; */
+    display: none;
+    /* -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg); */
+}
+
+.rain-box {
+    position: absolute;
+    overflow: hidden;
+    top: 220px;
+    right: 190px;
+}
+
+.rain-box .line {
+    width: 4px;
+    float: left;
+    position: relative;
+}
+
+.rain-box .line li {
+    margin-top: 2px;
+    height: 2px;
+    width: 2px;
+    background: #999;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    opacity: 0;
+}
+
+.rain-box .line1 {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin-left: 15px;
+}
+
+.rain-box .line2 {
+    -webkit-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+    transform: rotate(30deg);
+    margin-left: 2px;
+}
+
+.rain-box .line3 {
+    -webkit-transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+    -ms-transform: rotate(20deg);
+    -o-transform: rotate(20deg);
+    transform: rotate(20deg);
+    margin-left: 3px;
+}
+
+#btn {
+    position: absolute;
+    top: 80px;
+    right: 10px;
+    height: 20px;
+    width: 50px;
+    background: #f60;
+    border: none;
+    color: #fff;
+}
+
+
+/* animation */
+.a-swing {
+    -webkit-animation: 1s ease;
+    -moz-animation: 1s ease;
+    -ms-animation: 1s ease;
+    animation: 1s ease;
+}
+
+.bottle-fadeIn {
+    -webkit-animation: .8s ease;
+    -moz-animation: .8s ease;
+    -ms-animation: .8s ease;
+    animation: .8s ease;
+}
+
+.a-watering {
+    -webkit-animation: 0.5s ease 0 3;
+    -moz-animation: 0.5s ease 0 3;
+    -ms-animation: 0.5s ease 0 3;
+    animation: 0.5s ease 0 3;
+}
+
+/* 摇摆 */
+.a-swing {
+    -webkit-animation-name: swing;
+    -moz-animation-name: swing;
+    -ms-animation-name: swing;
+    animation-name: swing;
+}
+
+.bottle-fadeIn {
+    -webkit-animation-name: bottleFadeIn;
+    -moz-animation-name: bottleFadeIn;
+    -ms-animation-name: bottleFadeIn;
+    animation-name: bottleFadeIn;
+}
+
+.a-watering {
+    -webkit-animation-name: watering;
+    -moz-animation-name: watering;
+    -ms-animation-name: watering;
+    animation-name: watering;
+}
+
+
+/* 水瓶动画 start */
+@-webkit-keyframes bottleFadeIn {
+    0% {
+        opacity: 0;
+        top: 80px;
+        right: 0;
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        opacity: 1;
+        top: 180px;
+        right: 200px;
+        -webkit-transform: rotate(-45deg);
+    }
+}
+
+/* 流水动画 start */
+@-webkit-keyframes watering {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        height: 4px;
+    }
+}
+
+/* 摇摆 start */
+@-webkit-keyframes swing {
+    /*10%{
+                -webkit-transform:rotate(-5deg);
+            }
+            20%{
+                -webkit-transform:rotate(5deg);
+            }
+            30%{
+                -webkit-transform:rotate(-5deg);
+            }
+            40%{
+                -webkit-transform:rotate(5deg);
+            }
+            50%{
+                -webkit-transform:rotate(-5deg);
+            }
+            60%{
+                -webkit-transform:rotate(5deg);
+            }
+            80%{
+                -webkit-transform:rotate(-5deg);
+            }
+            100%{
+                -webkit-transform:rotate(0);
+            }*/
+
+    /*0%{
+                -webkit-transform:scale(1,1);
+            }
+            20%{
+                -webkit-transform:scale(1.1,1.1);
+            }
+            40%{
+                -webkit-transform:scale(1.2,1.2);
+            }
+            60%{
+                -webkit-transform:scale(1.1,1.1);
+            }
+            80%{
+                -webkit-transform:scale(1.2,1.2);
+            }
+            100%{
+                -webkit-transform:scale(1,1);
+            }*/
+
+    /*0%{
+                -webkit-transform:scale(1,1);
+            }
+            20%{
+                -webkit-transform:scale(1.02,1.02);
+            }
+            40%{
+                -webkit-transform:scale(1.05,1.05);
+            }
+            60%{
+                -webkit-transform:scale(1.07,1.07);
+            }
+            80%{
+                -webkit-transform:scale(1.1,1.1);
+            }
+            100%{
+                -webkit-transform:scale(1.2,1.2);
+            }*/
+
+    0% {
+        -webkit-transform: scale(1, 1);
+    }
+
+    35% {
+        -webkit-transform: scale(1.07, 1.07);
+    }
+
+    70% {
+        -webkit-transform: scale(1.1, 1.1);
+    }
+
+    100% {
+        -webkit-transform: scale(1.2, 1.2);
+    }
+}
+
+@-moz-keyframes swing {
+    20% {
+        -moz-transform: rotate(15deg);
+    }
+
+    40% {
+        -moz-transform: rotate(-10deg);
+    }
+
+    60% {
+        -moz-transform: rotate(5deg);
+    }
+
+    80% {
+        -moz-transform: rotate(-5deg);
+    }
+
+    100% {
+        -moz-transform: rotate(0);
+    }
+}
+
+@-ms-keyframes swing {
+    20% {
+        -ms-transform: rotate(15deg);
+    }
+
+    40% {
+        -ms-transform: rotate(-10deg);
+    }
+
+    60% {
+        -ms-transform: rotate(5deg);
+    }
+
+    80% {
+        -ms-transform: rotate(-5deg);
+    }
+
+    100% {
+        -ms-transform: rotate(0);
+    }
+}
+
+@keyframes swing {
+    20% {
+        transform: rotate(15deg);
+    }
+
+    40% {
+        transform: rotate(-10deg);
+    }
+
+    60% {
+        transform: rotate(5deg);
+    }
+
+    80% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
