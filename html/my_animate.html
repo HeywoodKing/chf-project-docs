@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="assets/css/animate.css">
+
+	<style type="text/css">
+		html,body{
+			margin: 0;
+			padding: 0;
+			/* background-color: #4B770A;
+			background-image: -webkit-gradient(radial,
+				50% 400, 1,
+                50% 400, 400,
+                from(rgba(255, 255, 255, 0.3)),
+                to(rgba(255, 255, 255, 0))
+                ); */
+		}
+		.box{
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			/* animation: change_background_color 5s ease; */
+			animation-name: change_background_color;
+			animation-duration: 5s;
+			animation-timing-function: infinite;
+			/* animation-delay: 2s; */
+			animation-iteration-count: infinite;
+			animation-direction: normal;
+			/* animation-play-state: running; */
+		}
+
+		@keyframes myfirst{
+			from {
+				background-color: red;
+			}
+			to {
+				background-color: yellow;
+			}
+		}
+
+		@keyframes change_background_color{
+			0%   {background: red;left:0px; top:0px;}
+		    25%  {background: yellow; left: 200px; top: 0px;}
+		    50%  {background: blue; left: 200px; top: 200px;}
+		    75%  {background: green; left: 0px; top: 200px}
+		    100% {background: red; left: 0px; top: 0px;}
+		}
+	</style>
+</head>
+<body>
+	<!-- <div class="box" id="box"></div> -->
+
+	<div class="animated infinite wobble">
+		<h2>Animate.css</h2>
+	</div>
+
+	<script src="http://zeptojs.com/zepto.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			// 
+		});
+	</script>
+</body>
+</html>
