@@ -81,43 +81,6 @@
         
         
     </style>
-    <script>
-        $(function(){
- 
-            $('#btn').click(function(){
-                $('.bottle').show().addClass('bottle-fadeIn');
-                $('.bottle').on('webkitAnimationEnd',function(){
-                    $(this).removeClass('bottle-fadeIn');
-                    $('.line li').addClass('a-watering');
-                });
-                $('.line li').on('webkitAnimationEnd',function(){
-                    $('.bottle').hide();
-                    $('.line li').removeClass('a-watering');
-                    $('.tree').addClass('a-swing');
-                });
-                $('.tree').on('webkitAnimationEnd',function(){
- 
-                    $('.tree').css({'-webkit-transform':'scale(1.2,1.2)'});
-                    $('.tree').removeClass('a-swing');
-                })
-                // setTimeout(function(){
-                //     $('.line li').addClass('a-watering');
-                // },800);
-                // setTimeout(function(){
-                //     $('.bottle').hide();
-                //     $('.tree').addClass('a-swing');
-                // },2300);
-                // setTimeout(function(){
-                //     $('.line li').removeClass('a-watering');
-                //     $('.tree').removeClass('a-swing');
-                //     $('.tree').css({'-webkit-transform':'scale(1.2,1.2)'});
-                // },3300);
- 
-            });
-            
- 
-        })
-    </script>
     <style>
         *{margin:0;padding:0;list-style: none;}
     .box{width:500px;border:1px solid #ddd;margin:10px auto;overflow:hidden;position: relative;padding-bottom:30px;}
